@@ -62,19 +62,19 @@ body {
   height: 100%;
   color: #fff;
 }
-#slides .slide_1 {
+#slides .slide__1 {
   background: url('./assets/math.png') 0 0 / 100% 100%;
 }
-#slides .slide_2 {
+#slides .slide__2 {
   background: url('./assets/sum.png') 0 0 / 100% 100%;
 }
-#slides .slide_3 {
+#slides .slide__3 {
   background: url('./assets/stackoverflow.png') 0 0 / 100% 100%;
 }
-#slides .slide_4 {
+#slides .slide__4 {
   background: url('./assets/console.png') 0 0 / 100% 100%;
 }
-#slides .slide_5 {
+#slides .slide__5 {
   background: url('./assets/bag.png') 0 0 / 100% 100%;
 }
 #slide1:checked ~ #buttons label:nth-child(1),
