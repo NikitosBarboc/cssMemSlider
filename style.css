@@ -4,6 +4,7 @@ body {
 }
 
 #slider {
+  position: relative;
   margin: 30px auto 0 auto;
   width: 37vw;
   max-width: 100%;
@@ -28,7 +29,7 @@ body {
 #overflow {
   width: 100%;
   height: 22.4vw;
-  min-height: 252px !important;
+  min-height: 252px;
   overflow: hidden;
 }
 #slide1:checked ~ #slides .row{
@@ -47,11 +48,14 @@ body {
   margin-left: -400%;
 }
 #slides .row {
-  transition: margin-left 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition: margin-left 0.8s ;
   width: 500%;
   line-height: 0;
   height: 22.4vw;
   min-height: 252px;
+}
+#slideText .rowText {
+  transition: margin-left 0.8s ;
 }
 #slides .slide {
   width: 20%;
@@ -75,7 +79,12 @@ body {
   background: url('./assets/console.png') 0 0 / 100% 100%;
 }
 #slides .slide__5 {
-  background: url('./assets/bag.png') 0 0 / 100% 100%;
+  background: url('./assets/server.png') 0 0 / 100% 100%;
+}
+#slides .slide__1 .after {
+  position: absolute;
+  bottom: -53px;
+  left: 0;
 }
 #slide1:checked ~ #buttons label:nth-child(1),
 #slide2:checked ~ #buttons label:nth-child(2),
@@ -95,12 +104,48 @@ body {
 #buttons {
   margin: 40px 0 0;
   text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
 #buttons label {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   border-radius:100%;
   background: rgb(12, 142, 235);
-  margin: 0 10px;
+  margin: 0 8px;
+}
+
+.rowText {
+  overflow: hidden;
+  display: flex;
+  width: 200px;
+  font-size: 24px;
+  margin: 56px 0 0 0;
+  position: relative;
+  justify-content: start;
+  text-align: left;
+} 
+
+[class *= __after] {
+   
+
+  transition: 0.6s;
+  min-width: 200px;
+}
+#slide1:checked ~ #slideText .rowText div:nth-child(1){
+  margin-left: 0;
+}
+#slide2:checked ~ #slideText .rowText div:nth-child(1){
+ margin-left: -200px;
+}
+#slide3:checked ~ #slideText .rowText div:nth-child(1){
+ margin-left: -400px;
+}
+#slide4:checked ~ #slideText .rowText div:nth-child(1){
+ margin-left: -600px;
+}
+#slide5:checked ~ #slideText .rowText div:nth-child(1){
+ margin-left: -800px;
 }
