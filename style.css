@@ -105,8 +105,8 @@ body {
 }
 #buttons label {
   display: inline-block;
-  width: 15px;
-  height: 15px;
+  width: 13px;
+  height: 13px;
   border-radius:100%;
   background: rgb(12, 142, 235);
   margin: 0 8px;
@@ -119,7 +119,7 @@ body {
   overflow: hidden;
   display: flex;
   width: 200px;
-  font-size: 24px;
+  font-size: 20px;
   margin: 38px 0 0 0;
   position: relative;
   justify-content: start;
@@ -150,6 +150,18 @@ body {
 @media(max-width: 700px) {
 #slideText {
   flex-direction: column-reverse;
+}
+#slider {
+  width: 64vw;
+  min-width: 294px;
+}
+#overflow {
+  min-height: 176.5px;
+  height: 44.8vw;
+}
+#slides .row {
+  min-height: 176.5px;
+  height: 44.8vw;
 }
 }
 
