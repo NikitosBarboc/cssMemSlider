@@ -70,7 +70,7 @@ body {
   background: url('./assets/math.png') 0 0 / 100% 100%;
 }
 #slides .slide__2 {
-  background: url('./assets/sum.png') 0 0 / 100% 100%;
+  background: url('./assets/whatAreYou.png') 0 0 / 100% 100%;
 }
 #slides .slide__3 {
   background: url('./assets/stackoverflow.png') 0 0 / 100% 100%;
@@ -83,14 +83,12 @@ body {
 }
 #slides .slide__1 .after {
   position: absolute;
-  bottom: -53px;
-  left: 0;
 }
-#slide1:checked ~ #buttons label:nth-child(1),
-#slide2:checked ~ #buttons label:nth-child(2),
-#slide3:checked ~ #buttons label:nth-child(3),
-#slide4:checked ~ #buttons label:nth-child(4),
-#slide5:checked ~ #buttons label:nth-child(5){
+#slide1:checked ~ #slideText #buttons label:nth-child(1),
+#slide2:checked ~ #slideText #buttons label:nth-child(2),
+#slide3:checked ~ #slideText #buttons label:nth-child(3),
+#slide4:checked ~ #slideText #buttons label:nth-child(4),
+#slide5:checked ~ #slideText #buttons label:nth-child(5){
    background: #fff;
   }
 #buttons label:nth-child(1):hover, 
@@ -104,25 +102,25 @@ body {
 #buttons {
   margin: 40px 0 0;
   text-align: center;
-  position: absolute;
-  right: 0;
-  bottom: 0;
 }
 #buttons label {
   display: inline-block;
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   border-radius:100%;
   background: rgb(12, 142, 235);
   margin: 0 8px;
 }
-
+#slideText {
+  display: flex;
+}
 .rowText {
+  
   overflow: hidden;
   display: flex;
   width: 200px;
   font-size: 24px;
-  margin: 56px 0 0 0;
+  margin: 38px 0 0 0;
   position: relative;
   justify-content: start;
   text-align: left;
@@ -148,4 +146,9 @@ body {
 }
 #slide5:checked ~ #slideText .rowText div:nth-child(1){
  margin-left: -800px;
+}
+@media(max-width: 700px) {
+#slideText {
+  flex-direction: column-reverse;
+}
 }
