@@ -1,10 +1,10 @@
 body {
   padding-top: 30px;
-  background: rgb(42, 38, 40);
+  background: rgb(61, 57, 59);
 }
 
 #slider {
-  position: relative;
+
   margin: 30px auto 0 auto;
   width: 37vw;
   max-width: 100%;
@@ -15,7 +15,7 @@ body {
   display: none;
 }
 
-#slider label {
+#slider label #slider label {
   cursor:pointer;
   text-decoration: none;
   border: 2.5px solid rgb(12, 142, 235);
@@ -23,8 +23,7 @@ body {
 #slides {
  
   border: 3px solid #ccc;
-  position: relative;
-  z-index: 1;
+
 }
 #overflow {
   width: 100%;
@@ -82,7 +81,7 @@ body {
   background: url('./assets/server.png') 0 0 / 100% 100%;
 }
 #slides .slide__1 .after {
-  position: absolute;
+
 }
 #slide1:checked ~ #slideText #buttons label:nth-child(1),
 #slide2:checked ~ #slideText #buttons label:nth-child(2),
@@ -103,11 +102,16 @@ body {
   margin: 40px 0 0;
   text-align: center;
 }
-#buttons label {
+#buttons label  {
+  width: 20px;
+  height: 20px;
+}
+#buttons label{
   display: inline-block;
   width: 13px;
   height: 13px;
   border-radius:100%;
+  border: 2.5px solid rgb(12, 142, 235);
   background: rgb(12, 142, 235);
   margin: 0 8px;
 }
@@ -121,7 +125,7 @@ body {
   width: 200px;
   font-size: 20px;
   margin: 38px 0 0 0;
-  position: relative;
+
   justify-content: start;
   text-align: left;
 } 
