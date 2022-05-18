@@ -1,0 +1,183 @@
+body {
+  padding-top: 30px;
+  background: rgb(61, 57, 59);
+}
+
+#slider {
+
+  margin: 30px auto 0 auto;
+  width: 37vw;
+  max-width: 100%;
+  text-align: center;
+  min-width: 420px;
+}
+#slider input[type=radio] {
+  display: none;
+}
+
+#slider label  {
+  cursor:pointer;
+  text-decoration: none;
+  /* border: 2.5px solid rgb(12, 142, 235); */
+}
+#slides {
+ 
+  border: 3px solid #ccc;
+
+}
+#overflow {
+  width: 100%;
+  height: 22.4vw;
+  min-height: 252px;
+  overflow: hidden;
+}
+#slide1:checked ~ #slides .row{
+   margin-left: 0%;
+}
+#slide2:checked ~ #slides .row {
+  margin-left: -100%;
+}
+#slide3:checked ~ #slides .row {
+  margin-left: -200%;
+}
+#slide4:checked ~ #slides .row {
+  margin-left: -300%;
+}
+#slide5:checked ~ #slides .row {
+  margin-left: -400%;
+}
+#slides .row {
+  transition: margin-left 0.8s ;
+  width: 500%;
+  line-height: 0;
+  height: 22.4vw;
+  min-height: 252px;
+}
+#slideText .rowText {
+  transition: margin-left 0.8s ;
+}
+#slides .slide {
+  width: 20%;
+  float:left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #fff;
+}
+#slides .slide__1 {
+  background: url('./assets/math.png') 0 0 / 100% 100%;
+}
+#slides .slide__2 {
+  background: url('./assets/whatAreYou.png') 0 0 / 100% 100%;
+}
+#slides .slide__3 {
+  background: url('./assets/stackoverflow.png') 0 0 / 100% 100%;
+}
+#slides .slide__4 {
+  background: url('./assets/console.png') 0 0 / 100% 100%;
+}
+#slides .slide__5 {
+  background: url('./assets/server.png') 0 0 / 100% 100%;
+}
+#slide1:checked ~ #slideText #buttons label:nth-child(1) .button__1,
+#slide2:checked ~ #slideText #buttons label:nth-child(2) .button__2,
+#slide3:checked ~ #slideText #buttons label:nth-child(3) .button__3,
+#slide4:checked ~ #slideText #buttons label:nth-child(4) .button__4,
+#slide5:checked ~ #slideText #buttons label:nth-child(5) .button__5{
+   background: #fff;
+  }
+#buttons label:nth-child(1):hover .button__1, 
+#buttons label:nth-child(2):hover .button__2,
+#buttons label:nth-child(3):hover .button__3,
+#buttons label:nth-child(4):hover .button__4,
+#buttons label:nth-child(5):hover .button__5{
+  border: 2.5px solid white;
+  background: white;
+}
+#buttons {
+  margin: 40px 0 0;
+  text-align: center;
+}
+#buttons label  {
+  width: 20px;
+  height: 20px;
+}
+#buttons label{
+  display: inline-block;
+  width: 2.4rem;
+  height: 1.8rem;
+}
+#buttons label .btn{
+  box-sizing: content-box;
+  cursor: pointer;
+  width: 1vw;
+  height: 1vw;
+  min-height: 0.6rem;
+  min-width: 0.6rem;
+  max-height: 0.9rem;
+  max-width: 0.9rem;
+  border-radius: 100%;
+  border: 2.5px solid rgb(12, 142, 235);
+  background: rgb(12, 142, 235);
+  position: relative;
+}
+#slideText {
+  display: flex;
+}
+.rowText {
+  
+  overflow: hidden;
+  display: flex;
+  width: 200px;
+  font-size: 20px;
+  margin: 38px 0 0 0;
+
+  justify-content: start;
+  text-align: left;
+} 
+
+[class *= __after] {
+   
+
+  transition: 0.6s;
+  min-width: 200px;
+}
+#slide1:checked ~ #slideText .rowText div:nth-child(1){
+  margin-left: 0;
+}
+#slide2:checked ~ #slideText .rowText div:nth-child(1){
+ margin-left: -200px;
+}
+#slide3:checked ~ #slideText .rowText div:nth-child(1){
+ margin-left: -400px;
+}
+#slide4:checked ~ #slideText .rowText div:nth-child(1){
+ margin-left: -600px;
+}
+#slide5:checked ~ #slideText .rowText div:nth-child(1){
+ margin-left: -800px;
+}
+@media(max-width: 700px) {
+#slideText {
+  flex-direction: column-reverse;
+}
+#slider {
+  width: 64vw;
+  min-width: 294px;
+}
+#overflow {
+  min-height: 176.5px;
+  height: 44.8vw;
+}
+#slides .row {
+  min-height: 176.5px;
+  height: 44.8vw;
+}
+}
+
+
+
+
+
+
