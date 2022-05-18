@@ -15,10 +15,10 @@ body {
   display: none;
 }
 
-#slider label #slider label {
+#slider label  {
   cursor:pointer;
   text-decoration: none;
-  border: 2.5px solid rgb(12, 142, 235);
+  /* border: 2.5px solid rgb(12, 142, 235); */
 }
 #slides {
  
@@ -80,21 +80,18 @@ body {
 #slides .slide__5 {
   background: url('./assets/server.png') 0 0 / 100% 100%;
 }
-#slides .slide__1 .after {
-
-}
-#slide1:checked ~ #slideText #buttons label:nth-child(1),
-#slide2:checked ~ #slideText #buttons label:nth-child(2),
-#slide3:checked ~ #slideText #buttons label:nth-child(3),
-#slide4:checked ~ #slideText #buttons label:nth-child(4),
-#slide5:checked ~ #slideText #buttons label:nth-child(5){
+#slide1:checked ~ #slideText #buttons label:nth-child(1) .button__1,
+#slide2:checked ~ #slideText #buttons label:nth-child(2) .button__2,
+#slide3:checked ~ #slideText #buttons label:nth-child(3) .button__3,
+#slide4:checked ~ #slideText #buttons label:nth-child(4) .button__4,
+#slide5:checked ~ #slideText #buttons label:nth-child(5) .button__5{
    background: #fff;
   }
-#buttons label:nth-child(1):hover, 
-#buttons label:nth-child(2):hover,
-#buttons label:nth-child(3):hover,
-#buttons label:nth-child(4):hover,
-#buttons label:nth-child(5):hover{
+#buttons label:nth-child(1):hover .button__1, 
+#buttons label:nth-child(2):hover .button__2,
+#buttons label:nth-child(3):hover .button__3,
+#buttons label:nth-child(4):hover .button__4,
+#buttons label:nth-child(5):hover .button__5{
   border: 2.5px solid white;
   background: white;
 }
@@ -108,12 +105,22 @@ body {
 }
 #buttons label{
   display: inline-block;
-  width: 13px;
-  height: 13px;
-  border-radius:100%;
+  width: 2.4rem;
+  height: 1.8rem;
+}
+#buttons label .btn{
+  box-sizing: content-box;
+  cursor: pointer;
+  width: 1vw;
+  height: 1vw;
+  min-height: 0.6rem;
+  min-width: 0.6rem;
+  max-height: 0.9rem;
+  max-width: 0.9rem;
+  border-radius: 100%;
   border: 2.5px solid rgb(12, 142, 235);
   background: rgb(12, 142, 235);
-  margin: 0 8px;
+  position: relative;
 }
 #slideText {
   display: flex;
@@ -168,6 +175,7 @@ body {
   height: 44.8vw;
 }
 }
+
 
 
 
